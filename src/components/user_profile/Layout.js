@@ -9,13 +9,13 @@ const Layout = ({ children }) => {
     <Container>
       <Link to="/">
         <Header as="h1" className={h1}>
-          react-starter-boilerplate-hmr
+          RMW-lookup
         </Header>
       </Link>
       {children}
       <Divider />
       <p className={pullRight}>
-        Made with <Icon name="heart" color="red" /> by Esau Silva
+        Made with <Icon name="heart" color="red" /> by Dean Peter
       </p>
     </Container>
   );

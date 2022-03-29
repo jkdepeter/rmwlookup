@@ -1,5 +1,4 @@
 const commonPaths = require('./common-paths');
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
@@ -21,6 +20,7 @@ const config = {
     },
   },
   plugins: [
+    
     new HtmlWebpackPlugin({
       template: `public/index.html`,
       favicon: `public/favicon.ico`,

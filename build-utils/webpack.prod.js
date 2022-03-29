@@ -1,11 +1,11 @@
 const commonPaths = require('./common-paths');
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
   mode: 'production',
   entry: {
-    app: [`${commonPaths.appEntry}/index.js`],
+    app: ['babel-polyfill',`${commonPaths.appEntry}/index.js`],
   },
   output: {
     filename: 'static/[name].[fullhash].js',
@@ -42,12 +42,13 @@ const config = {
           },
           {
             loader: 'postcss-loader',
-          },
+          }, 
         ],
       },
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[fullhash].css',
     }),
