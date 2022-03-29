@@ -1,10 +1,14 @@
 {
-  "name": "react-starter-boilerplate-hmr",
+  "name": "rmw-lookup",
   "version": "1.0.0",
   "description": "RMW Lookup",
   "main": "index.js",
   "author": "Dean Peter",
   "license": "MIT",
+  "engines": {
+    "node": "16.13.1",
+    "yarn":"1.22.7"
+  },
   "scripts": {
     "dev": "yarn prebuild && wp --env dev",
     "dev:bundleanalyzer": "yarn prebuild && yarn dev --addons bundleanalyzer",
