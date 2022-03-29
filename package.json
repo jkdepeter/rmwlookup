@@ -1,16 +1,17 @@
 {
   "name": "react-starter-boilerplate-hmr",
   "version": "1.0.0",
-  "description": "React starter boilerplate with Hot Module Replacement, React 16 and Webpack 4",
+  "description": "RMW Lookup",
   "main": "index.js",
-  "author": "Esau Silva <@_esausilva>",
+  "author": "Dean Peter",
   "license": "MIT",
   "scripts": {
     "dev": "yarn prebuild && wp --env dev",
     "dev:bundleanalyzer": "yarn prebuild && yarn dev --addons bundleanalyzer",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production wp --env prod",
-    "build:bundleanalyzer": "yarn build --addons bundleanalyzer"
+    "build:bundleanalyzer": "yarn build --addons bundleanalyzer",
+    "heroku-postbuild": "yarn run build"
   },
   "proxy": "https://api-rmwlookup.soul2urfeet.com.pg",
   "dependencies": {
@@ -29,6 +30,8 @@
     "clean-webpack-plugin": "^4.0.0",
     "faker": "^6.6.6",
     "firebase": "^9.6.8",
+    "g": "^2.0.1",
+    "heroku": "^7.60.0",
     "image-webpack-loader": "^8.1.0",
     "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
