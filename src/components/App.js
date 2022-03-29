@@ -5,7 +5,7 @@ import Home from "./Clients/Home";
 
 //import Home from './Home';
 import HomeLogin  from './Login/LoginHome';
-import Loading from './Client/Loading';
+import Loading from './user_profile/Loading';
 import LoginForm from "./Login/LoginForm"
 import SignIn from "./Login/signinForm"
 import {auth} from "./firebase/firebase.config"
@@ -13,7 +13,7 @@ import {onAuthStateChanged} from "firebase/auth"
 import { result } from 'lodash';
 
 const AsyncNoMatch = importedComponent(
-  () => import(/* webpackChunkName:'NoMatch' */ './Client/NoMatch'),
+  () => import(/* webpackChunkName:'NoMatch' */ './user_profile/NoMatch'),
   {
     LoadingComponent: Loading
   }
