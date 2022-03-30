@@ -52,6 +52,7 @@ const config = {
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[fullhash].css',
     }),
+    
   ],
 };
 

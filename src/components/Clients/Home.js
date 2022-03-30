@@ -238,7 +238,7 @@ function DashboardContent() {
   const [open, setOpen] = React.useState(true);
 
 
-  const [page, setPage] = React.useState(1);
+  const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleChangePage = (event, newPage) => {
@@ -469,7 +469,7 @@ React.useEffect(() => {
             }}
           >
             <Toolbar />
-            <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+            <Container maxwidth="lg" sx={{ mt: 4, mb: 4 }}>
               <Grid container spacing={3}>
                 {/* Chart */}
                 <Grid item xs={12} md={8} lg={9}>
@@ -532,7 +532,7 @@ React.useEffect(() => {
                           
                           height={200}
                           // image={productImage}
-                          maxWidth="lg"
+                          maxwidth="lg"
                           src={`${productImage}?w=100&h=100&fit=crop&auto=format`}
                           alt="Chelsea-header"/>
                           {/* <CardHeader
@@ -596,7 +596,7 @@ React.useEffect(() => {
                       
                 </Grid>
                 <Grid item xs={12}>
-                  <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column'}}>
+                  <Paper sx={{ display: 'flex', flexDirection: 'column'}}>
                     <React.Fragment>
                         <Typography>
                         <Title > Products </Title>
