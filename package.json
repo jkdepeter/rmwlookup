@@ -10,12 +10,12 @@
     "yarn": "1.22.17"
   },
   "scripts": {
+    "start": "yarn run build",
     "dev": "yarn prebuild && wp --env dev",
     "dev:bundleanalyzer": "yarn prebuild && yarn dev --addons bundleanalyzer",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production wp --env prod",
-    "build:bundleanalyzer": "yarn build --addons bundleanalyzer",
-    "heroku-postbuild": "yarn run build"
+    "build:bundleanalyzer": "yarn build --addons bundleanalyzer"
   },
   "proxy": "https://api-rmwlookup.soul2urfeet.com.pg",
   "dependencies": {
