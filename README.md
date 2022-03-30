@@ -1,4 +1,4 @@
-# react-starter-boilerplate-hmr
+# RMW-lookup
 
 > React RMW Lookup and Webpack 5
 
@@ -14,8 +14,7 @@
 - @babel/plugin-proposal-class-properties
 - @babel/plugin-syntax-dynamic-import
 - Code splitting by Route and Vendor
-- [Webpack Bundle Analyzer](https://github.com/th0r/webpack-bundle-analyzer)
-- Take a look at [package.json](https://github.com/esausilva/react-starter-boilerplate-hmr/blob/master/package.json)
+
 
 ### Usage
 
