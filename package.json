@@ -7,7 +7,7 @@
   "license": "MIT",
   "engines": {
     "node": "16.13.1",
-    "yarn": "1.22.17"
+    "yarn": "1.22.18"
   },
   "scripts": {
     "start": "yarn run build",
