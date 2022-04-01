@@ -109,13 +109,6 @@
     "webpack-plugin-serve": "^1.5.0",
     "yarn-upgrade-all": "^0.7.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/esausilva/react-starter-boilerplate-hmr.git"
-  },
-  "bugs": {
-    "url": "https://github.com/esausilva/react-starter-boilerplate-hmr/issues"
-  },
   "keywords": [
     "react",
     "react 17",
