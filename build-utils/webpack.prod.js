@@ -1,10 +1,7 @@
 const commonPaths = require('./common-paths');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { any } = require('prop-types');
 
-
-const host = 'localhost' || any;
 const config = {
   mode: 'production',
   entry: {
@@ -31,28 +28,6 @@ const config = {
             },
           },
           {
-            test: /\.css$/,
-            use: [
-              {
-                loader: 'style-loader',
-                options: {
-                  esModule: true,
-                },
-              },
-              {
-                loader: 'css-loader',
-                options: {
-                  esModule: true,
-                  modules: {
-                    mode: 'local',
-                    exportLocalsConvention: 'camelCaseOnly',
-                    namedExport: true,
-                  },
-                },
-              },
-            ],
-          },
-          {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
@@ -66,15 +41,18 @@ const config = {
             },
           },
           {
-            test: /\.(png|jpe?g|gif)$/i,
-            loader: 'file-loader',
-            options: {
-              name:'[name].[ext]',
-              outputPath: 'image/',
-              publicPath: 'image/',
-            }
-          },
+            loader: 'postcss-loader',
+          }, 
         ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name:'[name].[ext]',
+          outputPath: 'image/',
+          publicPath: 'image/',
+        }
       },
     ],
   },
@@ -83,6 +61,7 @@ const config = {
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[fullhash].css',
     }),
+    
   ],
 };
 
