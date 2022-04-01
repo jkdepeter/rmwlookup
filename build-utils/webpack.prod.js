@@ -31,6 +31,28 @@ const config = {
             },
           },
           {
+            test: /\.css$/,
+            use: [
+              {
+                loader: 'style-loader',
+                options: {
+                  esModule: true,
+                },
+              },
+              {
+                loader: 'css-loader',
+                options: {
+                  esModule: true,
+                  modules: {
+                    mode: 'local',
+                    exportLocalsConvention: 'camelCaseOnly',
+                    namedExport: true,
+                  },
+                },
+              },
+            ],
+          },
+          {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
@@ -44,8 +66,14 @@ const config = {
             },
           },
           {
-            loader: 'postcss-loader',
-          }, 
+            test: /\.(png|jpe?g|gif)$/i,
+            loader: 'file-loader',
+            options: {
+              name:'[name].[ext]',
+              outputPath: 'image/',
+              publicPath: 'image/',
+            }
+          },
         ],
       },
     ],
