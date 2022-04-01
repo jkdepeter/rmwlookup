@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { WebpackPluginServe: Serve } = require('webpack-plugin-serve');
 
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || any;
 
 const config = {
   mode: 'production',
