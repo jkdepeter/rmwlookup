@@ -1,6 +1,9 @@
 const commonPaths = require('./common-paths');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { WebpackPluginServe: Serve } = require('webpack-plugin-serve');
+
+const port = process.env.PORT || 3000;
 
 const config = {
   mode: 'production',
@@ -51,6 +54,15 @@ const config = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[fullhash].css',
+    }),
+    new Serve({
+      historyFallback: true,
+      liveReload: false,
+      hmr: true,
+      host: 'localhost',
+      port: port,
+      open: true,
+      static: commonPaths.outputPath,
     }),
     
   ],
