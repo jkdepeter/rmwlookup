@@ -2,9 +2,10 @@ const commonPaths = require('./common-paths');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { WebpackPluginServe: Serve } = require('webpack-plugin-serve');
+const { any } = require('prop-types');
 
 const port = process.env.PORT || any;
-
+const host = 'localhost' || any;
 const config = {
   mode: 'production',
   entry: {
@@ -87,7 +88,7 @@ const config = {
       historyFallback: true,
       liveReload: false,
       hmr: true,
-      host: 'localhost',
+      host: host,
       port: port,
       open: true,
       static: commonPaths.outputPath,
